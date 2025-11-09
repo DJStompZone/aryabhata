@@ -1,10 +1,35 @@
-# tests/test_cli.py
-import subprocess
+import runpy
 import sys
-import os
+from aryabhata.main import main
 
-def test_cli_runs_and_exits_cleanly():
-    cmd = [sys.executable, "-m", "aryabhata", "2"]
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=5)
-    assert proc.returncode == 0
-    assert "Aryabhata square root" in proc.stdout
+
+def test_main_no_digits_default(capsys):
+    main(["9"])
+    out = capsys.readouterr().out.strip()
+    # sqrt(9) = 3
+    assert out == "3"
+
+
+def test_main_with_digits_default(capsys):
+    main(["82", "--digits", "3"])
+    out = capsys.readouterr().out.strip()
+    assert out.startswith("9.055")
+
+
+def test_main_debug(capsys):
+    main(["82", "--digits", "3", "--debug"])
+    lines = capsys.readouterr().out.strip().splitlines()
+
+    assert lines[0].startswith("9.055")
+
+    assert "[scaled-root]" in lines[1]
+    assert "[remainder]" in lines[2]
+    assert "[identity]" in lines[3]
+
+
+def test_module_executes_if_guard(capsys, monkeypatch):
+    # simulate `python -m aryabhata 82 --digits 3`
+    monkeypatch.setattr(sys, "argv", ["aryabhata", "82", "--digits", "3"])
+    runpy.run_module("aryabhata.__main__", run_name="__main__")
+    out = capsys.readouterr().out.strip()
+    assert out.startswith("9.055")
