@@ -158,4 +158,4 @@ It’s math you can watch happening.
 
 ## License
 
-MIT
+[MIT](LICENSE)

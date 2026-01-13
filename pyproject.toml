@@ -1,16 +1,28 @@
 [project]
 name = "aryabhata"
 version = "0.1.2"
-description = ""
+description = "Aryabhata's digit‑pair square‑root algorithm"
 authors = [
     {name = "DJ Stomp",email = "85457381+DJStompZone@users.noreply.github.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.12,<4.0"
-dependencies = [
+license = "MIT"
+license-files = ["LICEN[CS]E.*"]
+
+[project.urls]
+Homepage = "https://github.com/DJStompZone/aryabhata"
+Repository = "https://github.com/DJStompZone/aryabhata.git"
+Support = "https://discord.stomp.zone"
+
+[project.optional-dependencies]
+dev = [
     "pytest (>=9.0.0,<10.0.0)",
     "coverage (>=7.11.2,<8.0.0)"
 ]
+
+[project.scripts]
+aryabhata = "aryabhata.main:main"
 
 [tool.poetry]
 packages = [{include = "aryabhata"}]
