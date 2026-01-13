@@ -2,6 +2,8 @@
 
 A Python implementation of **Aryabhata’s digit‑pair square‑root algorithm** — a classical Indian arithmetic method for extracting square roots using only integer operations.
 
+<img width=460 src="https://github.com/user-attachments/assets/637497cc-806e-4779-8de1-f39584c31a03"/>
+
 This project provides:
 
 - A mathematically exact square‑root engine
@@ -9,7 +11,6 @@ This project provides:
 - Optional ASCII animation of the digit‑pair extraction
 - 100% unit‑test and branch coverage
 
----
 
 ## Features
 
@@ -21,7 +22,6 @@ This project provides:
 - Optional ASCII animation showing every digit trial
 - Pytest test suite with full coverage
 
----
 
 ## Installation
 
@@ -39,7 +39,6 @@ cd aryabhata
 pip install -e .[dev]
 ```
 
----
 
 ## Usage
 
@@ -120,7 +119,6 @@ Where `R` is the root built so far.
 
 This is mathematically equivalent to long‑hand square‑root extraction but works entirely in integers.
 
----
 
 ## Library API
 
