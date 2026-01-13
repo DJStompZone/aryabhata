@@ -25,18 +25,18 @@ This project provides:
 
 ## Installation
 
-Clone and install with Poetry:
+Install with pip:
 
 ```
-git clone https://github.com/yourname/aryabhata
+pip install aryabhata
+```
+
+Local development:
+
+```
+git clone https://github.com/djstompzone/aryabhata
 cd aryabhata
-poetry install
-```
-
-Or install locally:
-
-```
-pip install .
+pip install -e .[dev]
 ```
 
 ---
@@ -49,6 +49,12 @@ pip install .
 python -m aryabhata 82
 ```
 
+Or
+
+```
+aryabhata 82
+```
+
 Output:
 
 ```
@@ -58,7 +64,7 @@ Output:
 ### With decimal precision
 
 ```
-python -m aryabhata 82 --digits 3
+aryabhata 82 --digits 3
 ```
 
 Output:
@@ -70,7 +76,7 @@ Output:
 ### Debug mode
 
 ```
-python -m aryabhata 82 --digits 3 --debug
+aryabhata 82 --digits 3 --debug
 ```
 
 Output:
@@ -85,7 +91,7 @@ Output:
 ### ASCII animation
 
 ```
-python -m aryabhata 82 --digits 3 --animate
+aryabhata 82 --digits 3 --animate
 ```
 
 This plays a frame‑by‑frame digit‑pair square‑root extraction in your terminal.
@@ -158,4 +164,4 @@ It’s math you can watch happening.
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) License

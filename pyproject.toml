@@ -1,6 +1,6 @@
 [project]
 name = "aryabhata"
-version = "0.1.2"
+version = "1.0.0"
 description = "Aryabhata's digit‑pair square‑root algorithm"
 authors = [
     {name = "DJ Stomp",email = "85457381+DJStompZone@users.noreply.github.com"}
