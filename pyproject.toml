@@ -8,7 +8,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12,<4.0"
 license = "MIT"
-license-files = ["LICEN[CS]E.*"]
+license-files = ["LICENSE"]
 
 [project.urls]
 Homepage = "https://github.com/DJStompZone/aryabhata"
