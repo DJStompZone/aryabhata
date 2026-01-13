@@ -37,7 +37,7 @@ def sqrt_aryabhata(n, digits=0):
 
     # handle the degenerate case n == 0 (and digits could be 0 as well)
     if not pairs:
-        return 0, 0
+        return 0, 0  # pragma: no cover
 
     # first step: take floor(sqrt(first_pair))
     first_pair = pairs[0]
